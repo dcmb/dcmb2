@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# the cms
+gem 'comfortable_mexican_sofa', '~> 1.12.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
