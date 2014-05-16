@@ -9,6 +9,11 @@ class Ability
 
     if user.is_admin?
       can [:read, :manage], "Cms::Site"
+      can [:read, :index, :show, :update], User
+      can :destroy, User do |other|
+        user.id != other.id
+      end
+      can [:read, :manage], ActiveAdmin::Comment
     end
 
     # Define abilities for the passed in user here. For example:

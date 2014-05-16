@@ -89,16 +89,3 @@ ComfortableMexicanSofa.configure do |config|
   #   config.reveal_cms_partials = false
 
 end
-
-# Default credentials for ComfortableMexicanSofa::HttpAuth
-# YOU REALLY WANT TO CHANGE THIS BEFORE PUTTING YOUR SITE LIVE
-ComfortableMexicanSofa::HttpAuth.username = 'username'
-ComfortableMexicanSofa::HttpAuth.password = 'password'
-
-# You can use bcrypt (gem 'bcrypt-ruby') if you want to:
-#   require 'bcrypt'
-#   ComfortableMexicanSofa::HttpAuth.username = 'username'
-#   ComfortableMexicanSofa::HttpAuth.password = BCrypt::Password.new '... bcrypt hash ...'
-#
-# To create a bcrypt hash:
-#   BCrypt::Password.create('password').to_s

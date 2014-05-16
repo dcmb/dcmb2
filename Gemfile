@@ -9,6 +9,7 @@ gem 'comfortable_mexican_sofa', '~> 1.12.0'
 gem 'devise'
 gem 'devise_cas_authenticatable' # Dartmouth sso
 gem 'cancancan'
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
