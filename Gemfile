@@ -5,6 +5,11 @@ ruby '2.1.2'
 # the cms
 gem 'comfortable_mexican_sofa', '~> 1.12.0'
 
+# auth
+gem 'devise'
+gem 'devise_cas_authenticatable' # Dartmouth sso
+gem 'cancancan'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record
