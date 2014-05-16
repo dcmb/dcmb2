@@ -1,0 +1,6 @@
+<h2>More Songs</h2>
+<ul>
+  <% @cms_site.pages.find_by_slug("music").children.select {|page| page != @cms_page }.each do |page| %>
+    <li><%= link_to page.label, page.full_path %></li>
+  <% end %>
+</ul>

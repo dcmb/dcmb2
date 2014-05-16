@@ -1,0 +1,231 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url("http://yui.yahooapis.com/3.0.0/build/cssreset/reset-min.css");
+
+/* typography */
+em {
+  font-style: italic; }
+
+p {
+  font-family: sans-serif; }
+
+h1, h2, h3, h4, h5, h6, h7 {
+  font-family: serif; }
+
+/* headers */
+h1, h2, h3 {
+  font-weight: bold;
+  color: #18430f; }
+
+h2, h3 {
+  margin-left: 30px; }
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  padding: 18px;
+  &.title {
+    font-size: 25pt;
+    padding: 12px;
+    color: white; }
+}
+
+.readers #header {
+  h1.title {
+    padding: 0;
+    text-align: left;
+    float: left;
+  }
+
+  h2 {
+    text-align: right;
+    float: right;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  padding: 5px; }
+
+h3 {
+  margin: 18px;
+  font-size: 20px; }
+
+/* structure */
+html {
+  background-color: #87b37e; }
+
+body {
+  background-color: #87b37e;
+  width: 100%; }
+
+#container {
+  width: 900px;
+  background-color: #39672f;
+  margin: 8px auto 8px auto;
+  padding: 0;
+  text-align: left;
+  overflow: hidden; }
+
+#header {
+  background-color: #18430f;
+  color: white;
+  padding: 12px;
+  overflow: hidden;
+  h1, h2, h3 {
+    color: white;
+ }
+}
+
+#navbar {
+  float: left;
+  padding: 0 0 0 15px;
+  width: 180px - 15px;
+
+  a {
+    display: block;
+    padding: 3px 3px 5px 30px;
+    margin-bottom: 5px;
+  }
+
+  .speaker {
+    height: auto;
+    width: auto;
+    float: none;
+    clear: none;
+    position: static;
+  }
+}
+
+#content {
+  width: 640px;
+  background-color: white;
+  padding: 10px 20px 10px 15px;
+  margin: 15px;
+  margin-left: 195px;
+  overflow: hidden;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px; }
+  #content p {
+    margin: 15px; }
+  #content ul {
+    list-style-type: none;
+    margin-left: 30px; }
+
+#footer p {
+  background-color: #18430f;
+  height: 1em; }
+
+/* objects */
+ul.link-list {
+  list-style-type: none;
+  margin-left: 30px; }
+
+ul.nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: sans-serif;
+  a {
+    background-color: #334d2e;
+    color: #87b37e;
+    color: white;
+    text-decoration: none;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px; }
+  a:hover {
+    background-color: #87b37e;
+    color: #334d2e; }
+}
+
+div.post, li.post {
+  border-left: 2px solid #87b37e;
+  padding-left: 5px;
+  margin-bottom: 1em;
+}
+
+div.forum {
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+#andNow, #m-joke {
+  font-size: 14pt;
+  font-style: italic;
+  color: #77b36a;
+  padding: 5px; }
+
+#andNow {
+  margin-left: 15px; }
+
+#m-joke {
+  margin-left: 45px; }
+
+.floatRight {
+  float: right;
+  margin: 15px; }
+
+.floatLeft {
+  float: left;
+  margin: 0;
+  padding: 0; }
+
+/* specifics */
+#directorate #content ul {
+  margin-left: 0; }
+#directorate #content li {
+  display: block;
+  list-style-position: inside; }
+
+#directorate li img {
+  float: left;
+  margin: 0 15px 15px 0;
+  width: 108;
+  height: 108; }
+  #directorate li img + img {
+    float: right;
+    margin: 0 0 15px 15px; }
+
+/* new clearfix */
+.clearfix:after {
+       visibility: hidden;
+       display: block;
+       font-size: 0;
+       content: " ";
+       clear: both;
+       height: 0;
+       }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+#directorate #content li:after {
+       visibility: hidden;
+       display: block;
+       font-size: 0;
+       content: " ";
+       clear: both;
+       height: 0;
+       }
+* html #directorate #content li             { zoom: 1; } /* IE6 */
+*:first-child+html #directorate #content li { zoom: 1; } /* IE7 */
+
+
+div.error, div.notice {
+  position: static !important;
+  width: auto !important;
+}

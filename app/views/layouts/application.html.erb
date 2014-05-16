@@ -1,14 +1,41 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
-<head>
-  <title>Dcmb2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <%= stylesheet_link_tag "application" %>
+    <link rel="SHORTCUT ICON" href="images/old_logo.jpg"/>
+    <script type="text/javascript" src="http://use.typekit.com/pss6thw.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <title>DCMB - <%= @cms_page.label %></title>
+  </head>
 
-<%= yield %>
+  <body id="<%= @cms_page.slug %>">
+    <div id="container">
 
-</body>
+      <div id="header">
+        <p id="andNow">And now,</p>
+        <p id="m-joke"><%= cms_inheritable_block_content :'m-joke' %></p>
+        <h1 class="title"><%= cms_inheritable_block_content :'dcmb-name' %></h1>
+      </div> <!-- end #header -->
+
+<div class="clearfix">
+      <div id="navbar">
+        <ul class="nav">
+          <%= link_to @cms_site.pages.root.label, @cms_site.pages.root.full_path %>
+          <% @cms_site.pages.root.children.published.each do |page| %>
+            <%= link_to page.label, page.full_path unless page.slug =~ /^\d+$/ %>
+          <% end %>
+        </ul>
+      </div> <!-- end #navbar -->
+
+      <div id="content" class="clearfix">
+        <%= yield %>
+      </div> <!-- end #content -->
+</div>
+      
+      <div id="footer">
+      </div> <!-- end #footer-->
+      
+    </div> <!-- end #container -->
+  </body>
 </html>
+
