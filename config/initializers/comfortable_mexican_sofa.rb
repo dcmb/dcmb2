@@ -89,3 +89,5 @@ ComfortableMexicanSofa.configure do |config|
   #   config.reveal_cms_partials = false
 
 end
+
+ComfortableMexicanSofa::ViewHooks.add :navigation, "/admin_nav_links"
