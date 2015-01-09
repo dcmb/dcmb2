@@ -1,8 +1,8 @@
 DCMB
 ====
 
-Contact Andrew Bloomgarden via [GitHub messages](https://github.com/aughr) for
-any questions on how this works.
+Contact [Andrew Bloomgarden](https://github.com/aughr) for any questions on how
+this works.
 
 To start
 --------
