@@ -75,7 +75,10 @@ Running locally
 Moving data between development and production
 ----------------------------------------------
 
-You can easily make changes locally and then move them into production:
+You can easily make changes locally and then move them into production.
+
+BE CAREFUL. These methods wipe out _all_ data in the target and replace it with
+whatever you load in.
 
 ```bash
 $ rails server
