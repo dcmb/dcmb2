@@ -71,3 +71,29 @@ Running locally
   $ rails server
   ```
 0. See it at [http://localhost:3000](http://localhost:3000)!
+
+Moving data between development and production
+----------------------------------------------
+
+You can easily make changes locally and then move them into production:
+
+```bash
+$ rails server
+# make tweaks in the UI
+$ rake comfortable_mexican_sofa:fixtures:export FROM=dcmb TO=dcmb
+$ git commit -a -m "Made changes"
+$ git push origin master
+$ git push heroku master
+$ heroku run rake comfortable_mexican_sofa:fixtures:import FROM=dcmb TO=dcmb
+```
+
+Taking changes from production and loading them locally is a little trickier,
+but totally doable:
+
+```bash
+$ heroku pgbackups:capture
+$ curl -o latest.dump `heroku pgbackups:url`
+$ pg_restore --verbose --clean --no-acl --no-owner -h localhost -U $USER -d dcmb_development latest.dump
+```bash
+
+See [Heroku's docs](https://devcenter.heroku.com/articles/heroku-postgres-import-export) for details.
