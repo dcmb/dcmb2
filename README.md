@@ -41,11 +41,11 @@ Running locally
   Follow the instructions on running it that it spits out (also available via
   `brew info postgres`).
 
-0. Install Ruby 2.1.2. I (Andrew) prefer rbenv:
+0. Install Ruby 2.1.4. I (Andrew) prefer rbenv:
 
   ```bash
   $ brew install rbenv ruby-build
-  $ rbenv install 2.1.2
+  $ rbenv install 2.1.4
   ```
 0. Get the gems the app uses:
 
