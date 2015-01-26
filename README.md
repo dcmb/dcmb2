@@ -23,7 +23,7 @@ $ heroku login
 $ git clone git@github.com:dcmb/dcmb2.git
 
 $ cd dcmb2
-$ heroku git remote:add -a dcmb2
+$ heroku git:remote add -a dcmb2
 
 # to deploy
 $ git push heroku master
