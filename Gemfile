@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.4'
+ruby '2.5.1'
 
 # the cms
 gem 'comfortable_mexican_sofa', '~> 1.12.0'
