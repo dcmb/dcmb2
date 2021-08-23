@@ -152,7 +152,7 @@ GEM
       activesupport (>= 3.2.0)
       cocaine (~> 0.5.5)
       mime-types
-      mimemagic (= 0.3.0)
+      mimemagic (= 0.3.7)
     pg (0.17.1)
     plupload-rails (1.2.1)
       rails (>= 3.1)
