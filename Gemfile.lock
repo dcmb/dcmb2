@@ -245,6 +245,7 @@ DEPENDENCIES
   devise
   devise_cas_authenticatable
   jquery-rails
+  mimemagic (~> 0.3.7)
   newrelic_rpm
   pg
   rails (~> 4.1.1)
