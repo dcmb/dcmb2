@@ -226,8 +226,6 @@ GEM
       raindrops (~> 0.7)
     warden (1.2.3)
       rack (>= 1.0)
-BUNDLED WITH
-   1.17.3
 
 PLATFORMS
   ruby
